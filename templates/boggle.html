@@ -1,0 +1,28 @@
+{% extends 'index.html' %} {% block title %} Board {% endblock %} {% block content %}
+<h1>Boggle Board</h1>
+
+<table>
+  <tbody>
+    {% for row in session['board'] %}
+    <tr>
+      {% for char in row %}
+      <td>{{ char }}</td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<form action="/check" id="guessForm" method="POST">
+  <label for="guess">See a WORD</label>
+  <input id="guess" type="text" name="guess" placeholder="   Type a WORD" autofocus />
+  <button id="guessButton">Submit!</button>
+</form>
+
+<h3>Is Valid: {{is_valid_word}}</h3>
+<h3>Score: {{session['score']}}</h3>
+<form action="/reset">
+  <input type="text" id="reset" hidden />
+  <button>Reset Score</button>
+</form>
+
+{% endblock %}

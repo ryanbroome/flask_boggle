@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(61, 108, 248);
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: coral;
+    font-size: larger;
+}
+
+a:hover {
+    text-decoration: none;
+    color: greenyellow;
+    font-size: larger;
+}
+
+td {
+    height: 100px;
+    width: 100px;
+    font-size: 50px;
+    border: 3px solid blue;
+    border-radius: 12px;
+    text-align: center;
+}
+
+input:hover {
+    background-color: rgb(98, 244, 78);
+}
